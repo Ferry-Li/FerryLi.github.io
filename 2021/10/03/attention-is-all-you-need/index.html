@@ -1,0 +1,1546 @@
+<!DOCTYPE HTML>
+<html lang="En">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Attention is All You Need, Hexo">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Attention is All You Need | Hexo</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Hexo</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Friends</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Hexo</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Friends
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Attention is All You Need</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/transformer/">
+                                <span class="chip bg-color">transformer</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/CV/" class="post-category">
+                                CV
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2021-10-03
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
+                    5.7k
+                </div>
+                
+
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Attention-Is-All-You-Need"><a href="#Attention-Is-All-You-Need" class="headerlink" title="Attention Is All You Need"></a>Attention Is All You Need</h1><h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><ul>
+<li>Recurrent neural networks, long short-term memory and gated recurrent neural networks have been state of the art  approaches in sequence modeling and transduction problems such as language modeling and machine translation. 在序列模型(语言建模，机器翻译等)中，RNN(循环神经网络)、LSTM(长短期记忆网络,一种时间循环神经网络)、GRNN(Gated-RNN)一直以来是最优方案。</li>
+<li>Recurrent models typically factor computation along the symbol positions of the input and output sequences. This inherently sequential nature precludes parallelization within training  examples, which becomes critical at longer sequence lengths, as memory  constraints limit batching across examples. 以上模型中，计算隐藏状态$h_t$的函数需要用到$h_{t-1}$(递归),因此无法并行化，严重限制了性能，且难以学习到全局的结构信息。</li>
+<li>Attention mechanisms have become an integral part of compelling sequence  modeling and transduction models in various tasks, allowing modeling of  dependencies without regard to their distance in the input or output sequences. Attention机制不考虑输入或输出序列中的距离，面向依赖性建模。</li>
+<li>In this work we propose the Transformer, a model architecture eschewing  recurrence and instead relying entirely on an attention mechanism to draw global  dependencies between input and output. The Transformer allows for significantly  more parallelization and can reach a new state of the art in translation quality. Transformer完全依赖于注意力机制来获得输入和输出之间的全局依赖关系，允许并行化。</li>
+</ul>
+<h2 id="2-Background"><a href="#2-Background" class="headerlink" title="2 Background"></a>2 Background</h2><ul>
+<li>The number of operations required to relate signals from two arbitrary input or output positions grows in the distance between positions, linearly for ConvS2S and logarithmically for ByteNet. This makes it more difficult to learn dependencies between distant positions. 一些网络如ByteNet, ConvS2S等，使用卷积神经网络作为基本构建块，并行计算所有输入和输出位置的隐藏表示。但距离较远的输入(输出)信号关联起来的计算量随距离的增加而增加，CONVS2为线性，ByteNet为对数。</li>
+<li>In the Transformer this is reduced to a constant number of operations. 而Transformer可以减少到常数级的计算量。</li>
+<li>Self-attention, sometimes called intra-attention is an attention mechanism relating different positions of a single sequence in order to compute a representation of the sequence. 自注意力机制，将单个序列的不同位置联系起来，来计算序列的表示。</li>
+</ul>
+<h2 id="3-Model-Architecture"><a href="#3-Model-Architecture" class="headerlink" title="3 Model Architecture"></a>3 Model Architecture</h2><ul>
+<li>The Transformer follows this overall architecture using stacked self-attention and point-wise, fully connected layers for both the encoder and decoder. Transformer使用多层叠加的自注意力层，在编码器和解码器中使用全连接层。</li>
+<li><img src="C:\Users\21156\AppData\Roaming\Typora\typora-user-images\image-20211027214240983.png" alt="Overall Architecture"></li>
+</ul>
+<h3 id="3-1-Encoder-and-Decoder-stacks"><a href="#3-1-Encoder-and-Decoder-stacks" class="headerlink" title="3.1 Encoder and Decoder stacks"></a>3.1 Encoder and Decoder stacks</h3><p><img src="C:\Users\21156\AppData\Roaming\Typora\typora-user-images\image-20211027214751365.png" alt="Encoder"></p>
+<ul>
+<li>Encoder<ul>
+<li>The encoder is composed of a stack of N= 6identical layers. 6个相同的层。</li>
+<li>The first is a multi-head self-attention mechanism, and the second is a simple,  position-wise fully connected feed-forward network. 每层包括两个子层。第一个子层是一个多头注意力层，第二个子层是一个简单的位置相关的全连接前馈网络。</li>
+<li>We employ a residual connection around each of the two sub-layers, followed by layer normalization. 每个子层之后，都加一个残差连接块，并进行归一化。</li>
+<li>That is, the output of each sub-layer is $LayerNorm(x+ Sublayer(x))$, where $Sublayer(x)$ is the function implemented by the sub-layer itself.将上一步的内容用公式表达。</li>
+<li>To facilitate these residual connections, all sub-layers in the model, as well  as the embedding layers, produce outputs of dimension $d_{model}$= 512. 所有子层，包括嵌入层的输出维度均为512.</li>
+</ul>
+</li>
+</ul>
+<p><img src="C:\Users\21156\AppData\Roaming\Typora\typora-user-images\image-20211027220049202.png" alt="Decoder"></p>
+<ul>
+<li>Decoder<ul>
+<li>The decoder is also composed of a stack of N= 6identical layers. 同样是重复六层。</li>
+<li>In addition to the two sub-layers in each encoder layer, the decoder inserts a third sub-layer, which performs multi-head<br>attention over the output of the encoder stack. Similar to the encoder, we employ residual connections around each of the sub-layers, followed by layer normalization. 与Encoder相比，多了一个多头注意力层，输入为Encoder的输出。同样，每个子层添加残差模块和归一化。</li>
+<li>We also modify the self-attention sub-layer in the decoder stack to prevent  positions from attending to subsequent positions. This masking, combined with  fact that the output embeddings are offset by one position, ensures that the  predictions for position $i$ can depend only on the known outputs at positions less  than $i$. 解码器中的自注意力层加入了mask，来确保对位置$i$的信息预测仅依靠位置$i$之前的信息。这其实是一个合理的常识性问题，对于一个信息序列，对某位置信息的预测应该只考虑该位置之前的信息，因为该位置后面的信息可能并没有。</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-2-Attention"><a href="#3-2-Attention" class="headerlink" title="3.2 Attention"></a>3.2 Attention</h3><h4 id="3-2-1-Scaled-Dot-Product-Attention"><a href="#3-2-1-Scaled-Dot-Product-Attention" class="headerlink" title="3.2.1 Scaled Dot-Product Attention"></a>3.2.1 Scaled Dot-Product Attention</h4><p><img src="C:\Users\21156\AppData\Roaming\Typora\typora-user-images\image-20211027223544767.png" alt="Scaled Dot-Product Attention"></p>
+<ul>
+<li>The input consists of queries and keys of dimension $d_k$, and values of dimension $d_v$. 输入为三个矩阵$Q,K,V$.</li>
+<li>We compute the dot products of the query with all keys, divide each by $\sqrt{d_k}$, and apply a softmax function to obtain the weights on the values. 每个位置的$Q$矩阵与所有位置的$K$矩阵做点积，除以$\sqrt{d_k}$(为了防止点积过大，$softmax$失去效果，所以需要调节一下)，再接一个$Softmax$层后获得矩阵$V$的权重。</li>
+<li>In practice, we compute the attention function on a set of queries simultaneously, packed together into a matrix $Q$. The keys and values are also packed together into matrices $K$ and $V$. 实际计算中，每个位置的矩阵$Q_i$摞在一起形成矩阵$Q$，$K_i$也摞在一起形成$K$，$V$同理。</li>
+<li>$Attention(Q,K,V)=softmax(\frac{QK^T}{\sqrt{d_k}})V, Q\in \R^{n \times d_k}, K\in \R^{m \times d_k}, V \in \R_{m \times d_v}$. 以上内容的公式形式。**可以理解为将 $n×d_k$ 的序列 $Q$ 编码成了一个新的 $n×d_v $的序列$V$**。</li>
+</ul>
+<h4 id="3-2-2-Multi-Head-Attention"><a href="#3-2-2-Multi-Head-Attention" class="headerlink" title="3.2.2 Multi-Head Attention"></a>3.2.2 Multi-Head Attention</h4><ul>
+<li>Instead of performing a single attention function with $d_{model}$-dimensional keys, values and queries, we found it beneficial to linearly project the queries, keys and values $h$ times with different, learned linear projections to $d_k$,$d_k$ and $d_v$ dimensions, respectively. 将$Q,K,V$各自线性投射分成$h$部分，实现多头注意力。</li>
+<li>On each of these projected versions of queries, keys and values we then perform the attention function in parallel, yielding $d_v$-dimensional output values.投射后，$Q,K,V$的维度会减少，并且分出去的几个部分可以并行计算。</li>
+<li>These are concatenated and once again projected, resulting in the final values. 这种投射其实就是把512维的向量拆开，分别计算(多个注意力机制并行计算)后，再连接在一起。</li>
+<li>$MultiHead(Q, K, V) = Concat(head_1,…,head_n)W^o, head_i=Attention(QW_i^Q, KW_i^K, VW_i^V)$.以上内容的公式形式，其中$W_i^Q,W_i^K,W_i^V,W^O$是需要学习的参数。</li>
+<li>In this work we employ $h= 8$ parallel attention layers, or heads. For each of these we use $d_k=d_v=d_{model}/h= 64$. Due to the reduced dimension of each head, the total computational cost is similar to that of single-head attention with full dimensionality. 将此前的$Q,K,V$按维度平均分成8部分，每一部分作为多头注意力的一头。计算量基本与拆分前相同。</li>
+</ul>
+<h4 id="3-2-3-Applications-of-Attention-in-our-Model"><a href="#3-2-3-Applications-of-Attention-in-our-Model" class="headerlink" title="3.2.3 Applications of Attention in our Model"></a>3.2.3 Applications of Attention in our Model</h4><ul>
+<li><p>In “encoder-decoder attention” layers, the queries come from the previous decoder layer,and the memory keys and values come from the output of the encoder. This allows every position in the decoder to attend over all positions in the input sequence. 在Decoder中，$Q$矩阵来自Decoder的前一层，$K,V$来自Encoder的输出。</p>
+<p><img src="C:\Users\21156\AppData\Roaming\Typora\typora-user-images\image-20211027214240983.png" alt="Overall Architecture"></p>
+</li>
+<li><p>The encoder contains self-attention layers. In a self-attention layer all of the keys, values and queries come from the same place, in this case, the output of the previous layer in the encoder. Each position in the encoder can attend to all positions in the previous layer of the encoder. 在Encoder中，$Q,K,V$矩阵均来自上一层Encoder的输出。</p>
+</li>
+<li><p>We need to prevent leftward information flow in the decoder to preserve the auto-regressive property. We implement this<br>inside of scaled dot-product attention by masking out (setting to$-\infty$) all values in the input of the $softmax$ which correspond to illegal connections. Decoder应该避免看到未来的信息，只考虑当前的信息，所以对所有未来的信息，通过设置$-\infty$将其过滤掉。有关自回归性，<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_27590277/article/details/107274212?ops_request_misc=&request_id=&biz_id=102&utm_term=seq%E8%87%AA%E5%9B%9E%E5%BD%92%E6%80%A7&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-2-107274212.pc_search_result_hbase_insert&spm=1018.2226.3001.4187">可以参考这篇文章。</a></p>
+</li>
+</ul>
+<h3 id="3-3-Position-wise-Feed-Forward-Networks"><a href="#3-3-Position-wise-Feed-Forward-Networks" class="headerlink" title="3.3 Position-wise Feed-Forward Networks"></a>3.3 Position-wise Feed-Forward Networks</h3><ul>
+<li>In addition to attention sub-layers, each of the layers in our encoder and  decoder contains a fully connected feed-forward network, which is applied to  each position separately and identically. This consists of two linear  transformations with a ReLU activation in between. 每个Encoder和Decoder都包含一个全连接前向反馈网络，包括两个线性变换，中间用ReLU激活。同一层每个位置的信息对应的FFN一样，不同层的FFN不一样。</li>
+<li>$FFN(x)=ReLU(xW_1+b_1)W_2+b_2$. 层与层之间使用不同的参数。</li>
+</ul>
+<h3 id="3-4-Embedding-and-Softmax"><a href="#3-4-Embedding-and-Softmax" class="headerlink" title="3.4 Embedding and Softmax"></a>3.4 Embedding and Softmax</h3><ul>
+<li>Similarly to other sequence transduction models, we use learned embeddings to convert the input tokens and output tokens to vectors of dimension $d_{model}$. 和其他序列模型类似，Transformer使用学习到的嵌入层将输入和输出信息转换为向量。</li>
+<li>We also use the usual learned linear transformation and $softmax$ function to  convert the decoder output to predicted next-token probabilities. FFN需要经过训练，通过$Softmax$输出概率。</li>
+<li>In our model, we share the same weight matrix between the two embedding layers and the pre-softmax linear transformation.  在将源语言和目标语言转换为向量的过程中，原文让他们共享一个词嵌入矩阵。对于欧洲语系，这是可行的，因为它们之间有许多相似之处。对于中英文翻译，则没有必要共享参数。</li>
+<li>In the embedding layers, we multiply those weights by $\sqrt{d_{model}}$. 词嵌入矩阵 * $\sqrt{d_{model}}$.</li>
+</ul>
+<h3 id="3-5-Positional-Encoding-PE"><a href="#3-5-Positional-Encoding-PE" class="headerlink" title="3.5 Positional Encoding(PE)"></a>3.5 Positional Encoding(PE)</h3><ul>
+<li>Since our model contains no recurrence and no convolution, in order for the  model to make use of the order of the sequence, we must inject some information  about the relative or absolute position of the tokens in the sequence. Transformer没有考虑到不同位置下的信息差异，即相同的信息不同的排列，得到的结果是一样的。为了能够考虑位置因素，需要加入位置信息，即Positional Encoding.</li>
+<li> The positional encodings have the same dimension $d_{model}$ as the embeddings, so that the two can be summed. Positional encodings和embeddings的维度一致，故可以直接相加。这样，输入向量就具备了位置信息。</li>
+<li>$PE_{(pos,2i)}=sin(pos/10000^{2i/d_{model}}),PE_{(pos,2i+1)}=cos(pos/10000^{2i/d_{model}})$. $pos$指位置，$i$指维度。</li>
+<li>We chose this function because we hypothesized it would allow the model to easily learn to attend by<br>relative positions. 以上公式可以认为是经验公式，不是数学推导的结果。</li>
+</ul>
+<h2 id="4-Code代码"><a href="#4-Code代码" class="headerlink" title="4 Code代码"></a>4 Code代码</h2><ul>
+<li>参考网址:<a target="_blank" rel="noopener" href="http://nlp.seas.harvard.edu/2018/04/03/attention.html">The Annotated Transformer (harvard.edu)</a>,<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/107889011">The Annotated Transformer的中文注释版（1） - 知乎 (zhihu.com)</a></li>
+</ul>
+<img src="https://pic4.zhimg.com/80/v2-a50a353fb2277abc01e0ef14607a499f_720w.jpg" alt="Model Architecture" style="zoom:80%;" />
+
+<h3 id="4-0-packages"><a href="#4-0-packages" class="headerlink" title="4.0 packages"></a>4.0 packages</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># !pip install http://download.pytorch.org/whl/cu80/torch-0.3.0.post4-cp36-cp36m-linux_x86_64.whl </span>
+<span class="token comment"># !pip install numpy matplotlib spacy torchtext seaborn</span>
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> torch
+<span class="token keyword">import</span> torch<span class="token punctuation">.</span>nn <span class="token keyword">as</span> nn
+<span class="token keyword">import</span> torch<span class="token punctuation">.</span>nn<span class="token punctuation">.</span>functional <span class="token keyword">as</span> F
+<span class="token keyword">import</span> math<span class="token punctuation">,</span>copy<span class="token punctuation">,</span>time
+<span class="token keyword">from</span> torch<span class="token punctuation">.</span>autograd <span class="token keyword">import</span> Variable
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">import</span> seaborn
+seaborn<span class="token punctuation">.</span>set_context<span class="token punctuation">(</span>context<span class="token operator">=</span><span class="token string">"talk"</span><span class="token punctuation">)</span> 
+<span class="token comment"># seaborn只在最后可视化self-attention的时候用到，</span>
+<span class="token comment"># 可以先不管或者注释掉这两行</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-1-Embeddings"><a href="#4-1-Embeddings" class="headerlink" title="4.1 Embeddings"></a>4.1 Embeddings</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Embeddings</span><span class="token punctuation">(</span>nn<span class="token punctuation">.</span>Module<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>d_model<span class="token punctuation">,</span>vocab<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment">#d_model=512, vocab=当前语言的词表大小</span>
+    <span class="token builtin">super</span><span class="token punctuation">(</span>Embeddings<span class="token punctuation">,</span>self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>lut<span class="token operator">=</span>nn<span class="token punctuation">.</span>Embedding<span class="token punctuation">(</span>vocab<span class="token punctuation">,</span>d_model<span class="token punctuation">)</span> 
+    <span class="token comment"># one-hot转词嵌入，这里有一个待训练的矩阵E，大小是vocab*d_model</span>
+    self<span class="token punctuation">.</span>d_model<span class="token operator">=</span>d_model <span class="token comment"># 512</span>
+  <span class="token keyword">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span> 
+     <span class="token comment"># x ~ (batch.size, sequence.length, one-hot), </span>
+     <span class="token comment">#one-hot大小=vocab，当前语言的词表大小</span>
+     <span class="token keyword">return</span> self<span class="token punctuation">.</span>lut<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token operator">*</span>math<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>self<span class="token punctuation">.</span>d_model<span class="token punctuation">)</span> 
+     <span class="token comment"># 得到的10*512词嵌入矩阵，主动乘以sqrt(512)=22.6，</span>
+     <span class="token comment">#这里的输出的tensor大小类似于(batch.size, sequence.length, 512)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>默认情况下，源语言和目标语言的Embedding不共享参数。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">if</span> <span class="token boolean">False</span><span class="token punctuation">:</span>
+    model<span class="token punctuation">.</span>src_embed<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>lut<span class="token punctuation">.</span>weight<span class="token operator">=</span>model<span class="token punctuation">.</span>tgt_embeddings<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>lut<span class="token punctuation">.</span>weight
+    model<span class="token punctuation">.</span>generator<span class="token punctuation">.</span>lut<span class="token punctuation">.</span>weight<span class="token operator">=</span>model<span class="token punctuation">.</span>tgt_embed<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>lut<span class="token punctuation">.</span>weight<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-2-Positional-Encoding-PE"><a href="#4-2-Positional-Encoding-PE" class="headerlink" title="4.2 Positional Encoding(PE)"></a>4.2 Positional Encoding(PE)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">PositionalEncoding</span><span class="token punctuation">(</span>nn<span class="token punctuation">.</span>Module<span class="token punctuation">)</span><span class="token punctuation">:</span> 
+  <span class="token triple-quoted-string string">"""
+  Implement the PE function.
+  """</span>
+  <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> d_model<span class="token punctuation">,</span> dropout<span class="token punctuation">,</span> max_len<span class="token operator">=</span><span class="token number">5000</span><span class="token punctuation">)</span><span class="token punctuation">:</span> 
+    <span class="token comment">#d_model=512,dropout=0.1,</span>
+    <span class="token comment">#max_len=5000代表事先准备好长度为5000的序列的位置编码，其实没必要，</span>
+    <span class="token comment">#一般100或者200足够了。</span>
+    <span class="token builtin">super</span><span class="token punctuation">(</span>PositionalEncoding<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span> 
+    self<span class="token punctuation">.</span>dropout <span class="token operator">=</span> nn<span class="token punctuation">.</span>Dropout<span class="token punctuation">(</span>p<span class="token operator">=</span>dropout<span class="token punctuation">)</span> 
+
+    <span class="token comment"># Compute the positional encodings once in log space. </span>
+    pe <span class="token operator">=</span> torch<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span>max_len<span class="token punctuation">,</span> d_model<span class="token punctuation">)</span> 
+    <span class="token comment">#(5000,512)矩阵，保持每个位置的位置编码，一共5000个位置，</span>
+    <span class="token comment">#每个位置用一个512维度向量来表示其位置编码</span>
+    position <span class="token operator">=</span> torch<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> max_len<span class="token punctuation">)</span><span class="token punctuation">.</span>unsqueeze<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> 
+    <span class="token comment"># (5000) -> (5000,1)</span>
+    <span class="token comment"># arrange(start, end, step)</span>
+    div_term <span class="token operator">=</span> torch<span class="token punctuation">.</span>exp<span class="token punctuation">(</span>torch<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> d_model<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">*</span> 
+      <span class="token operator">-</span><span class="token punctuation">(</span>math<span class="token punctuation">.</span>log<span class="token punctuation">(</span><span class="token number">10000.0</span><span class="token punctuation">)</span> <span class="token operator">/</span> d_model<span class="token punctuation">)</span><span class="token punctuation">)</span> 
+      <span class="token comment"># (0,2,…, 4998)一共准备2500个值，供sin, cos调用</span>
+    pe<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> torch<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>position <span class="token operator">*</span> div_term<span class="token punctuation">)</span> <span class="token comment"># 偶数下标的位置</span>
+    pe<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> torch<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>position <span class="token operator">*</span> div_term<span class="token punctuation">)</span> <span class="token comment"># 奇数下标的位置</span>
+    pe <span class="token operator">=</span> pe<span class="token punctuation">.</span>unsqueeze<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> 
+    <span class="token comment"># (5000, 512) -> (1, 5000, 512) 为batch.size留出位置</span>
+    self<span class="token punctuation">.</span>register_buffer<span class="token punctuation">(</span><span class="token string">'pe'</span><span class="token punctuation">,</span> pe<span class="token punctuation">)</span> 
+  <span class="token keyword">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">:</span> 
+    x <span class="token operator">=</span> x <span class="token operator">+</span> Variable<span class="token punctuation">(</span>self<span class="token punctuation">.</span>pe<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token punctuation">:</span>x<span class="token punctuation">.</span>size<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span> requires_grad<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span> 
+    <span class="token comment"># 接受1.Embeddings的词嵌入结果x，</span>
+    <span class="token comment">#然后把自己的位置编码pe，封装成torch的Variable(不需要梯度)，加上去。</span>
+    <span class="token comment">#例如，假设x是(30,10,512)的一个tensor，</span>
+    <span class="token comment">#30是batch.size, 10是该batch的序列长度, 512是每个词的词嵌入向量；</span>
+    <span class="token comment">#则该行代码的第二项是(1, min(10, 5000), 512)=(1,10,512)，</span>
+    <span class="token comment">#在具体相加的时候，会扩展(1,10,512)为(30,10,512)，</span>
+    <span class="token comment">#保证一个batch中的30个序列，都使用（叠加）一样的位置编码。</span>
+    <span class="token keyword">return</span> self<span class="token punctuation">.</span>dropout<span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token comment"># 增加一次dropout操作</span>
+<span class="token comment"># 注意，位置编码不会更新，是写死的，所以这个class里面没有可训练的参数。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>4.1和4.2按如下方式连接起来</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">nn<span class="token punctuation">.</span>Sequential<span class="token punctuation">(</span>Embeddings<span class="token punctuation">(</span>d_model<span class="token punctuation">,</span>src_vocab<span class="token punctuation">)</span><span class="token punctuation">,</span>PositionalEncoding<span class="token punctuation">(</span>d_model<span class="token punctuation">,</span>dropout<span class="token punctuation">)</span><span class="token punctuation">)</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="4-3-Multi-Head-Attention"><a href="#4-3-Multi-Head-Attention" class="headerlink" title="4.3 Multi-Head Attention"></a>4.3 Multi-Head Attention</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">attention</span><span class="token punctuation">(</span>query<span class="token punctuation">,</span> key<span class="token punctuation">,</span> value<span class="token punctuation">,</span> mask<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> dropout<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span> 
+<span class="token comment"># query, key, value的形状类似于(30, 8, 10, 64), (30, 8, 11, 64), </span>
+<span class="token comment">#(30, 8, 11, 64)，例如30是batch.size，即当前batch中有多少一个序列；</span>
+<span class="token comment"># 8=head.num，注意力头的个数；</span>
+<span class="token comment"># 10=目标序列中词的个数，64是每个词对应的向量表示；</span>
+<span class="token comment"># 11=源语言序列传过来的memory中，当前序列的词的个数，</span>
+<span class="token comment"># 64是每个词对应的向量表示。</span>
+<span class="token comment"># 类似于，这里假定query来自target language sequence；</span>
+<span class="token comment"># key和value都来自source language sequence.</span>
+  <span class="token string">"Compute 'Scaled Dot Product Attention'"</span> 
+  d_k <span class="token operator">=</span> query<span class="token punctuation">.</span>size<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment"># 64=d_k</span>
+  scores <span class="token operator">=</span> torch<span class="token punctuation">.</span>matmul<span class="token punctuation">(</span>query<span class="token punctuation">,</span> key<span class="token punctuation">.</span>transpose<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">/</span> 
+    math<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>d_k<span class="token punctuation">)</span> <span class="token comment"># 先是(30,8,10,64)和(30, 8, 64, 11)相乘，</span>
+    <span class="token comment">#（注意是最后两个维度相乘）得到(30,8,10,11)，</span>
+    <span class="token comment">#代表10个目标语言序列中每个词和11个源语言序列的分别的“亲密度”。</span>
+    <span class="token comment">#然后除以sqrt(d_k)=8，防止过大的亲密度。</span>
+    <span class="token comment">#这里的scores的shape是(30, 8, 10, 11)</span>
+  <span class="token keyword">if</span> mask <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span> 
+    scores <span class="token operator">=</span> scores<span class="token punctuation">.</span>masked_fill<span class="token punctuation">(</span>mask <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1e9</span><span class="token punctuation">)</span> 
+    <span class="token comment">#使用mask，对已经计算好的scores，按照mask矩阵，填-1e9，</span>
+    <span class="token comment">#然后在下一步计算softmax的时候，被设置成-1e9的数对应的值~0,被忽视</span>
+  p_attn <span class="token operator">=</span> F<span class="token punctuation">.</span>softmax<span class="token punctuation">(</span>scores<span class="token punctuation">,</span> dim <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> 
+    <span class="token comment">#对scores的最后一个维度执行softmax，得到的还是一个tensor, </span>
+    <span class="token comment">#(30, 8, 10, 11)</span>
+  <span class="token keyword">if</span> dropout <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span> 
+    p_attn <span class="token operator">=</span> dropout<span class="token punctuation">(</span>p_attn<span class="token punctuation">)</span> <span class="token comment">#执行一次dropout</span>
+  <span class="token keyword">return</span> torch<span class="token punctuation">.</span>matmul<span class="token punctuation">(</span>p_attn<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">,</span> p_attn
+<span class="token comment">#返回的第一项，是(30,8,10, 11)乘以（最后两个维度相乘）</span>
+<span class="token comment">#value=(30,8,11,64)，得到的tensor是(30,8,10,64)，</span>
+<span class="token comment">#和query的最初的形状一样。另外，返回p_attn，形状为(30,8,10,11). </span>
+<span class="token comment">#注意，这里返回p_attn主要是用来可视化显示多头注意力机制。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">MultiHeadedAttention</span><span class="token punctuation">(</span>nn<span class="token punctuation">.</span>Module<span class="token punctuation">)</span><span class="token punctuation">:</span> 
+  <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> h<span class="token punctuation">,</span> d_model<span class="token punctuation">,</span> dropout<span class="token operator">=</span><span class="token number">0.1</span><span class="token punctuation">)</span><span class="token punctuation">:</span> 
+    <span class="token comment"># h=8, d_model=512</span>
+    <span class="token string">"Take in model size and number of heads."</span> 
+    <span class="token builtin">super</span><span class="token punctuation">(</span>MultiHeadedAttention<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span> 
+    <span class="token keyword">assert</span> d_model <span class="token operator">%</span> h <span class="token operator">==</span> <span class="token number">0</span> <span class="token comment"># We assume d_v always equals d_k 512%8=0</span>
+    self<span class="token punctuation">.</span>d_k <span class="token operator">=</span> d_model <span class="token operator">//</span> h <span class="token comment"># d_k=512//8=64</span>
+    self<span class="token punctuation">.</span>h <span class="token operator">=</span> h <span class="token comment">#8</span>
+    self<span class="token punctuation">.</span>linears <span class="token operator">=</span> clones<span class="token punctuation">(</span>nn<span class="token punctuation">.</span>Linear<span class="token punctuation">(</span>d_model<span class="token punctuation">,</span> d_model<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span> 
+    <span class="token comment">#定义四个Linear networks, 每个的大小是(512, 512)的，</span>
+    <span class="token comment">#每个Linear network里面有两类可训练参数，Weights，其大小为512*512</span>
+    <span class="token comment">#以及biases，其大小为512=d_model。</span>
+
+    self<span class="token punctuation">.</span>attn <span class="token operator">=</span> <span class="token boolean">None</span> 
+    self<span class="token punctuation">.</span>dropout <span class="token operator">=</span> nn<span class="token punctuation">.</span>Dropout<span class="token punctuation">(</span>p<span class="token operator">=</span>dropout<span class="token punctuation">)</span>
+  <span class="token keyword">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> query<span class="token punctuation">,</span> key<span class="token punctuation">,</span> value<span class="token punctuation">,</span> mask<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span> 
+   <span class="token comment"># 注意，输入query的形状类似于(30, 10, 512)，</span>
+   <span class="token comment"># key.size() ~ (30, 11, 512), </span>
+   <span class="token comment">#以及value.size() ~ (30, 11, 512)</span>
+    
+    <span class="token keyword">if</span> mask <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span> <span class="token comment"># Same mask applied to all h heads. </span>
+      mask <span class="token operator">=</span> mask<span class="token punctuation">.</span>unsqueeze<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment"># mask下回细细分解。</span>
+    nbatches <span class="token operator">=</span> query<span class="token punctuation">.</span>size<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment">#e.g., nbatches=30</span>
+    <span class="token comment"># 1) Do all the linear projections in batch from </span>
+    <span class="token comment">#d_model => h x d_k </span>
+    query<span class="token punctuation">,</span> key<span class="token punctuation">,</span> value <span class="token operator">=</span> <span class="token punctuation">[</span>l<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">.</span>view<span class="token punctuation">(</span>nbatches<span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>h<span class="token punctuation">,</span> self<span class="token punctuation">.</span>d_k<span class="token punctuation">)</span>
+      <span class="token punctuation">.</span>transpose<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token keyword">for</span> l<span class="token punctuation">,</span> x <span class="token keyword">in</span> 
+      <span class="token builtin">zip</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>linears<span class="token punctuation">,</span> <span class="token punctuation">(</span>query<span class="token punctuation">,</span> key<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span> 
+      <span class="token comment"># 这里是前三个Linear Networks的具体应用，</span>
+      <span class="token comment">#例如query=(30,10, 512) -> Linear network -> (30, 10, 512) </span>
+      <span class="token comment">#-> view -> (30,10, 8, 64) -> transpose(1,2) -> (30, 8, 10, 64)</span>
+      <span class="token comment">#，其他的key和value也是类似地，</span>
+      <span class="token comment">#从(30, 11, 512) -> (30, 8, 11, 64)。</span>
+    <span class="token comment"># 2) Apply attention on all the projected vectors in batch. </span>
+    x<span class="token punctuation">,</span> self<span class="token punctuation">.</span>attn <span class="token operator">=</span> attention<span class="token punctuation">(</span>query<span class="token punctuation">,</span> key<span class="token punctuation">,</span> value<span class="token punctuation">,</span> mask<span class="token operator">=</span>mask<span class="token punctuation">,</span> 
+      dropout<span class="token operator">=</span>self<span class="token punctuation">.</span>dropout<span class="token punctuation">)</span> 
+      <span class="token comment">#调用上面定义好的attention函数，输出的x形状为(30, 8, 10, 64)；</span>
+      <span class="token comment">#attn的形状为(30, 8, 10=target.seq.len, 11=src.seq.len)</span>
+    <span class="token comment"># 3) "Concat" using a view and apply a final linear. </span>
+    x <span class="token operator">=</span> x<span class="token punctuation">.</span>transpose<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span>contiguous<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>
+      view<span class="token punctuation">(</span>nbatches<span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>h <span class="token operator">*</span> self<span class="token punctuation">.</span>d_k<span class="token punctuation">)</span> 
+      <span class="token comment"># x ~ (30, 8, 10, 64) -> transpose(1,2) -> </span>
+      <span class="token comment">#(30, 10, 8, 64) -> contiguous() and view -> </span>
+      <span class="token comment">#(30, 10, 8*64) = (30, 10, 512)</span>
+<span class="token keyword">return</span> self<span class="token punctuation">.</span>linears<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span> 
+<span class="token comment">#执行第四个Linear network，把(30, 10, 512)经过一次linear network，</span>
+<span class="token comment">#得到(30, 10, 512).</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-7-LayerNorm"><a href="#4-7-LayerNorm" class="headerlink" title="4.7 LayerNorm"></a>4.7 LayerNorm</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">LayerNorm</span><span class="token punctuation">(</span>nn<span class="token punctuation">.</span>Module<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token string">"Construct a layernorm module (See citation for details)."</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> features<span class="token punctuation">,</span> eps<span class="token operator">=</span><span class="token number">1e-6</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># features=d_model=512, eps=epsilon 用于分母的非0化平滑</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span>LayerNorm<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>a_2 <span class="token operator">=</span> nn<span class="token punctuation">.</span>Parameter<span class="token punctuation">(</span>torch<span class="token punctuation">.</span>ones<span class="token punctuation">(</span>features<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token comment"># a_2 是一个可训练参数向量，(512)</span>
+        self<span class="token punctuation">.</span>b_2 <span class="token operator">=</span> nn<span class="token punctuation">.</span>Parameter<span class="token punctuation">(</span>torch<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span>features<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token comment"># b_2 也是一个可训练参数向量, (512)</span>
+        self<span class="token punctuation">.</span>eps <span class="token operator">=</span> eps
+
+    <span class="token keyword">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># x 的形状为(batch.size, sequence.len, 512)</span>
+        mean <span class="token operator">=</span> x<span class="token punctuation">.</span>mean<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> keepdim<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span> 
+        <span class="token comment"># 对x的最后一个维度，取平均值，得到tensor (batch.size, seq.len, 1)</span>
+        std <span class="token operator">=</span> x<span class="token punctuation">.</span>std<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> keepdim<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+        <span class="token comment"># 对x的最后一个维度，取标准方差，得(batch.size, seq.len, 1)</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>a_2 <span class="token operator">*</span> <span class="token punctuation">(</span>x <span class="token operator">-</span> mean<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token punctuation">(</span>std <span class="token operator">+</span> self<span class="token punctuation">.</span>eps<span class="token punctuation">)</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>b_2
+        <span class="token comment"># 本质上类似于（x-mean)/std，不过这里加入了两个可训练向量</span>
+        <span class="token comment"># a_2 and b_2，以及分母上增加一个极小值epsilon，用来防止std为0</span>
+        <span class="token comment"># 的时候的除法溢出</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-4-SubLayer-Connection"><a href="#4-4-SubLayer-Connection" class="headerlink" title="4.4 SubLayer Connection"></a>4.4 SubLayer Connection</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">SublayerConnection</span><span class="token punctuation">(</span>nn<span class="token punctuation">.</span>Module<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    A residual connection followed by a layer norm.
+    Note for code simplicity the norm is first as opposed to last.
+    """</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> size<span class="token punctuation">,</span> dropout<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># size=d_model=512; dropout=0.1</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span>SublayerConnection<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>norm <span class="token operator">=</span> LayerNorm<span class="token punctuation">(</span>size<span class="token punctuation">)</span> <span class="token comment"># (512)，用来定义a_2和b_2</span>
+        self<span class="token punctuation">.</span>dropout <span class="token operator">=</span> nn<span class="token punctuation">.</span>Dropout<span class="token punctuation">(</span>dropout<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">,</span> sublayer<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token string">"Apply residual connection to any sublayer with the "</span>
+        <span class="token string">"same size."</span>
+        <span class="token comment"># x is alike (batch.size, sequence.len, 512)</span>
+        <span class="token comment"># sublayer是一个具体的MultiHeadAttention</span>
+        <span class="token comment">#或者PositionwiseFeedForward对象</span>
+        <span class="token keyword">return</span> x <span class="token operator">+</span> self<span class="token punctuation">.</span>dropout<span class="token punctuation">(</span>sublayer<span class="token punctuation">(</span>self<span class="token punctuation">.</span>norm<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    	<span class="token comment"># return x + self.dropout(self.norm(sublayer(x)))</span>
+        <span class="token comment"># x (30, 10, 512) -> norm (LayerNorm) -> (30, 10, 512)</span>
+        <span class="token comment"># -> sublayer (MultiHeadAttention or PositionwiseFeedForward)</span>
+        <span class="token comment"># -> (30, 10, 512) -> dropout -> (30, 10, 512)</span>
+        
+        <span class="token comment"># 然后输入的x（没有走sublayer) + 上面的结果，</span>
+        <span class="token comment">#即实现了残差相加的功能</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-5-Position-wise-Feed-Forward-Network"><a href="#4-5-Position-wise-Feed-Forward-Network" class="headerlink" title="4.5 Position-wise Feed Forward Network"></a>4.5 Position-wise Feed Forward Network</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">PositionwiseFeedForward</span><span class="token punctuation">(</span>nn<span class="token punctuation">.</span>Module<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token string">"Implements FFN equation."</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> d_model<span class="token punctuation">,</span> d_ff<span class="token punctuation">,</span> dropout<span class="token operator">=</span><span class="token number">0.1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># d_model = 512</span>
+        <span class="token comment"># d_ff = 2048 = 512*4</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span>PositionwiseFeedForward<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>w_1 <span class="token operator">=</span> nn<span class="token punctuation">.</span>Linear<span class="token punctuation">(</span>d_model<span class="token punctuation">,</span> d_ff<span class="token punctuation">)</span>
+        <span class="token comment"># 构建第一个全连接层，(512, 2048)，其中有两种可训练参数：</span>
+        <span class="token comment"># weights矩阵，(512, 2048)，以及</span>
+        <span class="token comment"># biases偏移向量, (2048)</span>
+        self<span class="token punctuation">.</span>w_2 <span class="token operator">=</span> nn<span class="token punctuation">.</span>Linear<span class="token punctuation">(</span>d_ff<span class="token punctuation">,</span> d_model<span class="token punctuation">)</span>
+        <span class="token comment"># 构建第二个全连接层, (2048, 512)，两种可训练参数：</span>
+        <span class="token comment"># weights矩阵，(2048, 512)，以及</span>
+        <span class="token comment"># biases偏移向量, (512)</span>
+        self<span class="token punctuation">.</span>dropout <span class="token operator">=</span> nn<span class="token punctuation">.</span>Dropout<span class="token punctuation">(</span>dropout<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># x shape = (batch.size, sequence.len, 512)</span>
+        <span class="token comment"># 例如, (30, 10, 512)</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>w_2<span class="token punctuation">(</span>self<span class="token punctuation">.</span>dropout<span class="token punctuation">(</span>F<span class="token punctuation">.</span>relu<span class="token punctuation">(</span>self<span class="token punctuation">.</span>w_1<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token comment"># x (30, 10, 512) -> self.w_1 -> (30, 10, 2048)</span>
+        <span class="token comment"># -> relu -> (30, 10, 2048) </span>
+        <span class="token comment"># -> dropout -> (30, 10, 2048)</span>
+        <span class="token comment"># -> self.w_2 -> (30, 10, 512)是输出的shape</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token triple-quoted-string string">"""
+下面这个clones方法，实现一个网络的深copy，也就是说一个新的对象，和原来的对象，完全分离，不分享任何存储空间：（从而保证可训练参数，都有自己的取值，梯度）
+"""</span>
+<span class="token keyword">def</span> <span class="token function">clones</span><span class="token punctuation">(</span>module<span class="token punctuation">,</span> N<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token string">"Produce N identical layers."</span>
+    <span class="token keyword">return</span> nn<span class="token punctuation">.</span>ModuleList<span class="token punctuation">(</span><span class="token punctuation">[</span>copy<span class="token punctuation">.</span>deepcopy<span class="token punctuation">(</span>module<span class="token punctuation">)</span> <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>N<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-6-EncoderLayer"><a href="#4-6-EncoderLayer" class="headerlink" title="4.6 EncoderLayer"></a>4.6 EncoderLayer</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">EncoderLayer</span><span class="token punctuation">(</span>nn<span class="token punctuation">.</span>Module<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token string">"Encoder is made up of self-attn and "</span>
+    <span class="token string">"feed forward (defined below)"</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> size<span class="token punctuation">,</span> self_attn<span class="token punctuation">,</span> feed_forward<span class="token punctuation">,</span> dropout<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># size=d_model=512</span>
+        <span class="token comment"># self_attn = MultiHeadAttention对象, first sublayer</span>
+        <span class="token comment"># feed_forward = PositionwiseFeedForward对象，second sublayer</span>
+        <span class="token comment"># dropout = 0.1 (e.g.)</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span>EncoderLayer<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>self_attn <span class="token operator">=</span> self_attn
+        self<span class="token punctuation">.</span>feed_forward <span class="token operator">=</span> feed_forward
+        self<span class="token punctuation">.</span>sublayer <span class="token operator">=</span> clones<span class="token punctuation">(</span>SublayerConnection<span class="token punctuation">(</span>size<span class="token punctuation">,</span> dropout<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+        <span class="token comment"># 使用深度克隆方法，完整地复制出来两个SublayerConnection</span>
+        self<span class="token punctuation">.</span>size <span class="token operator">=</span> size <span class="token comment"># 512</span>
+
+    <span class="token keyword">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">,</span> mask<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token string">"Follow Figure 1 (left) for connections."</span>
+        <span class="token comment"># x shape = (30, 10, 512)</span>
+        <span class="token comment"># mask 是(batch.size, 10,10)的矩阵，类似于当前一个词w，有哪些词是w可见的</span>
+        <span class="token comment"># 源语言的序列的话，所有其他词都可见，除了"&lt;blank>"这样的填充；</span>
+        <span class="token comment"># 目标语言的序列的话，所有w的左边的词，都可见。</span>
+        <span class="token comment"># 匿名函数</span>
+        x <span class="token operator">=</span> self<span class="token punctuation">.</span>sublayer<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> <span class="token keyword">lambda</span> x<span class="token punctuation">:</span> self<span class="token punctuation">.</span>self_attn<span class="token punctuation">(</span>x<span class="token punctuation">,</span> x<span class="token punctuation">,</span> x<span class="token punctuation">,</span> mask<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token comment"># x (30, 10, 512) -> self_attn (MultiHeadAttention) </span>
+        <span class="token comment"># shape is same (30, 10, 512) -> SublayerConnection </span>
+        <span class="token comment"># -> (30, 10, 512)</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>sublayer<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> self<span class="token punctuation">.</span>feed_forward<span class="token punctuation">)</span>
+        <span class="token comment"># x 和feed_forward对象一起，给第二个SublayerConnection</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-8-Encoder"><a href="#4-8-Encoder" class="headerlink" title="4.8 Encoder"></a>4.8 Encoder</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Encoder</span><span class="token punctuation">(</span>nn<span class="token punctuation">.</span>Module<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token string">"Core encoder is a stack of N layers"</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> layer<span class="token punctuation">,</span> N<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># layer = one EncoderLayer object, N=6</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span>Encoder<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>layers <span class="token operator">=</span> clones<span class="token punctuation">(</span>layer<span class="token punctuation">,</span> N<span class="token punctuation">)</span> 
+        <span class="token comment"># 深copy，N=6，</span>
+        self<span class="token punctuation">.</span>norm <span class="token operator">=</span> LayerNorm<span class="token punctuation">(</span>layer<span class="token punctuation">.</span>size<span class="token punctuation">)</span>
+        <span class="token comment"># 定义一个LayerNorm，layer.size=d_model=512</span>
+        <span class="token comment"># 其中有两个可训练参数a_2和b_2</span>
+
+    <span class="token keyword">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">,</span> mask<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token string">"Pass the input (and mask) through each layer in turn."</span>
+        <span class="token comment"># x is alike (30, 10, 512)</span>
+        <span class="token comment"># (batch.size, sequence.len, d_model)</span>
+        <span class="token comment"># mask是类似于(batch.size, 10, 10)的矩阵</span>
+        <span class="token keyword">for</span> layer <span class="token keyword">in</span> self<span class="token punctuation">.</span>layers<span class="token punctuation">:</span>
+            x <span class="token operator">=</span> layer<span class="token punctuation">(</span>x<span class="token punctuation">,</span> mask<span class="token punctuation">)</span>
+            <span class="token comment"># 进行六次EncoderLayer操作</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>norm<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+        <span class="token comment"># 最后做一次LayerNorm，最后的输出也是(30, 10, 512) shape</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-9-DecoderLayer"><a href="#4-9-DecoderLayer" class="headerlink" title="4.9 DecoderLayer"></a>4.9 DecoderLayer</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">DecoderLayer</span><span class="token punctuation">(</span>nn<span class="token punctuation">.</span>Module<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token string">"Decoder is made of self-attn, src-attn, "</span>
+    <span class="token string">"and feed forward (defined below)"</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> size<span class="token punctuation">,</span> self_attn<span class="token punctuation">,</span> src_attn<span class="token punctuation">,</span> 
+      feed_forward<span class="token punctuation">,</span> dropout<span class="token punctuation">)</span><span class="token punctuation">:</span>
+      <span class="token comment"># size = d_model=512,</span>
+      <span class="token comment"># self_attn = one MultiHeadAttention object，目标语言序列的</span>
+      <span class="token comment"># src_attn = second MultiHeadAttention object, 目标语言序列</span>
+      <span class="token comment"># 和源语言序列之间的</span>
+      <span class="token comment"># feed_forward 一个全连接层</span>
+      <span class="token comment"># dropout = 0.1</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span>DecoderLayer<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>size <span class="token operator">=</span> size <span class="token comment"># 512</span>
+        self<span class="token punctuation">.</span>self_attn <span class="token operator">=</span> self_attn
+        self<span class="token punctuation">.</span>src_attn <span class="token operator">=</span> src_attn
+        self<span class="token punctuation">.</span>feed_forward <span class="token operator">=</span> feed_forward
+        self<span class="token punctuation">.</span>sublayer <span class="token operator">=</span> clones<span class="token punctuation">(</span>SublayerConnection<span class="token punctuation">(</span>size<span class="token punctuation">,</span> dropout<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+        <span class="token comment"># 需要三个SublayerConnection, 分别在</span>
+        <span class="token comment"># self.self_attn, self.src_attn, 和self.feed_forward</span>
+        <span class="token comment"># 的后边</span>
+
+    <span class="token keyword">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">,</span> memory<span class="token punctuation">,</span> src_mask<span class="token punctuation">,</span> tgt_mask<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token string">"Follow Figure 1 (right) for connections."</span>
+        m <span class="token operator">=</span> memory <span class="token comment"># (batch.size, sequence.len, 512) </span>
+        <span class="token comment"># 来自源语言序列的Encoder之后的输出，作为memory</span>
+        <span class="token comment"># 供目标语言的序列检索匹配：（类似于alignment in SMT)</span>
+        x <span class="token operator">=</span> self<span class="token punctuation">.</span>sublayer<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> 
+          <span class="token keyword">lambda</span> x<span class="token punctuation">:</span> self<span class="token punctuation">.</span>self_attn<span class="token punctuation">(</span>x<span class="token punctuation">,</span> x<span class="token punctuation">,</span> x<span class="token punctuation">,</span> tgt_mask<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token comment"># 通过一个匿名函数，来实现目标序列的自注意力编码</span>
+        <span class="token comment"># 结果扔给sublayer[0]:SublayerConnection</span>
+        x <span class="token operator">=</span> self<span class="token punctuation">.</span>sublayer<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> 
+          <span class="token keyword">lambda</span> x<span class="token punctuation">:</span> self<span class="token punctuation">.</span>src_attn<span class="token punctuation">(</span>x<span class="token punctuation">,</span> m<span class="token punctuation">,</span> m<span class="token punctuation">,</span> src_mask<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token comment"># 通过第二个匿名函数，来实现目标序列和源序列的注意力计算</span>
+        <span class="token comment"># 结果扔给sublayer[1]:SublayerConnection</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>sublayer<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> self<span class="token punctuation">.</span>feed_forward<span class="token punctuation">)</span>
+        <span class="token comment"># 走一个全连接层，然后</span>
+        <span class="token comment"># 结果扔给sublayer[2]:SublayerConnection</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-10-Decoder"><a href="#4-10-Decoder" class="headerlink" title="4.10 Decoder"></a>4.10 Decoder</h3><p><img src="https://pic1.zhimg.com/80/v2-b1bf4ef59f01b73c55f5f66fcc99d134_720w.jpg" alt="img"></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Decoder</span><span class="token punctuation">(</span>nn<span class="token punctuation">.</span>Module<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token string">"Generic N layer decoder with masking."</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> layer<span class="token punctuation">,</span> N<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># layer = DecoderLayer object</span>
+        <span class="token comment"># N = 6</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span>Decoder<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>layers <span class="token operator">=</span> clones<span class="token punctuation">(</span>layer<span class="token punctuation">,</span> N<span class="token punctuation">)</span>
+        <span class="token comment"># 深度copy六次DecoderLayer</span>
+        self<span class="token punctuation">.</span>norm <span class="token operator">=</span> LayerNorm<span class="token punctuation">(</span>layer<span class="token punctuation">.</span>size<span class="token punctuation">)</span>
+        <span class="token comment"># 初始化一个LayerNorm</span>
+
+    <span class="token keyword">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">,</span> memory<span class="token punctuation">,</span> src_mask<span class="token punctuation">,</span> tgt_mask<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> layer <span class="token keyword">in</span> self<span class="token punctuation">.</span>layers<span class="token punctuation">:</span>
+            x <span class="token operator">=</span> layer<span class="token punctuation">(</span>x<span class="token punctuation">,</span> memory<span class="token punctuation">,</span> src_mask<span class="token punctuation">,</span> tgt_mask<span class="token punctuation">)</span>
+            <span class="token comment"># 执行六次DecoderLayer</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>norm<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+        <span class="token comment"># 执行一次LayerNorm</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-11-Generator"><a href="#4-11-Generator" class="headerlink" title="4.11 Generator"></a>4.11 Generator</h3><p><img src="https://pic2.zhimg.com/80/v2-55395e797e8c887c02836f0211633169_720w.jpg" alt="img"></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Generator</span><span class="token punctuation">(</span>nn<span class="token punctuation">.</span>Module<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token string">"Define standard linear + softmax generation step."</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> d_model<span class="token punctuation">,</span> vocab<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># d_model=512</span>
+        <span class="token comment"># vocab = 目标语言词表大小</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span>Generator<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>proj <span class="token operator">=</span> nn<span class="token punctuation">.</span>Linear<span class="token punctuation">(</span>d_model<span class="token punctuation">,</span> vocab<span class="token punctuation">)</span>
+        <span class="token comment"># 定义一个全连接层，可训练参数个数是(512 * trg_vocab_size) + </span>
+        <span class="token comment"># trg_vocab_size</span>
+
+    <span class="token keyword">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> F<span class="token punctuation">.</span>log_softmax<span class="token punctuation">(</span>self<span class="token punctuation">.</span>proj<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span> dim<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token comment"># x 类似于 (batch.size, sequence.length, 512)</span>
+        <span class="token comment"># -> proj 全连接层 (30, 10, trg_vocab_size) = logits</span>
+        <span class="token comment"># 对最后一个维度执行log_soft_max</span>
+        <span class="token comment"># 得到(30, 10, trg_vocab_size)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-12-EncoderDecoder"><a href="#4-12-EncoderDecoder" class="headerlink" title="4.12 EncoderDecoder"></a>4.12 EncoderDecoder</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">EncoderDecoder</span><span class="token punctuation">(</span>nn<span class="token punctuation">.</span>Module<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    A standard Encoder-Decoder architecture. 
+    Base for this and many other models.
+    """</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> encoder<span class="token punctuation">,</span> decoder<span class="token punctuation">,</span> 
+      src_embed<span class="token punctuation">,</span> tgt_embed<span class="token punctuation">,</span> generator<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span>EncoderDecoder<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>encoder <span class="token operator">=</span> encoder
+        <span class="token comment"># Encoder对象</span>
+        self<span class="token punctuation">.</span>decoder <span class="token operator">=</span> decoder
+        <span class="token comment"># Decoder对象</span>
+        self<span class="token punctuation">.</span>src_embed <span class="token operator">=</span> src_embed
+        <span class="token comment"># 源语言序列的编码，包括词嵌入和位置编码</span>
+        self<span class="token punctuation">.</span>tgt_embed <span class="token operator">=</span> tgt_embed
+        <span class="token comment"># 目标语言序列的编码，包括词嵌入和位置编码</span>
+        self<span class="token punctuation">.</span>generator <span class="token operator">=</span> generator
+        <span class="token comment"># 生成器</span>
+
+    <span class="token keyword">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> src<span class="token punctuation">,</span> tgt<span class="token punctuation">,</span> src_mask<span class="token punctuation">,</span> tgt_mask<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token string">"Take in and process masked src and target sequences."</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>decode<span class="token punctuation">(</span>self<span class="token punctuation">.</span>encode<span class="token punctuation">(</span>src<span class="token punctuation">,</span> src_mask<span class="token punctuation">)</span><span class="token punctuation">,</span> src_mask<span class="token punctuation">,</span>
+                            tgt<span class="token punctuation">,</span> tgt_mask<span class="token punctuation">)</span>
+        <span class="token comment"># 先对源语言序列进行编码，</span>
+        <span class="token comment"># 结果作为memory传递给目标语言的编码器</span>
+
+    <span class="token keyword">def</span> <span class="token function">encode</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> src<span class="token punctuation">,</span> src_mask<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># src = (batch.size, seq.length)</span>
+        <span class="token comment"># src_mask 负责对src加掩码</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>encoder<span class="token punctuation">(</span>self<span class="token punctuation">.</span>src_embed<span class="token punctuation">(</span>src<span class="token punctuation">)</span><span class="token punctuation">,</span> src_mask<span class="token punctuation">)</span>
+        <span class="token comment"># 对源语言序列进行编码，得到的结果为</span>
+        <span class="token comment"># (batch.size, seq.length, 512)的tensor</span>
+
+    <span class="token keyword">def</span> <span class="token function">decode</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> memory<span class="token punctuation">,</span> src_mask<span class="token punctuation">,</span> tgt<span class="token punctuation">,</span> tgt_mask<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>decoder<span class="token punctuation">(</span>self<span class="token punctuation">.</span>tgt_embed<span class="token punctuation">(</span>tgt<span class="token punctuation">)</span><span class="token punctuation">,</span> 
+          memory<span class="token punctuation">,</span> src_mask<span class="token punctuation">,</span> tgt_mask<span class="token punctuation">)</span>
+        <span class="token comment"># 对目标语言序列进行编码，得到的结果为</span>
+        <span class="token comment"># (batch.size, seq.length, 512)的tensor</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-13-model"><a href="#4-13-model" class="headerlink" title="4.13 model"></a>4.13 model</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">make_model</span><span class="token punctuation">(</span>src_vocab<span class="token punctuation">,</span> tgt_vocab<span class="token punctuation">,</span> N<span class="token operator">=</span><span class="token number">6</span><span class="token punctuation">,</span> 
+               d_model<span class="token operator">=</span><span class="token number">512</span><span class="token punctuation">,</span> d_ff<span class="token operator">=</span><span class="token number">2048</span><span class="token punctuation">,</span> h<span class="token operator">=</span><span class="token number">8</span><span class="token punctuation">,</span> dropout<span class="token operator">=</span><span class="token number">0.1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token string">"Helper: Construct a model from hyperparameters."</span>
+    <span class="token comment"># src_vocab = 源语言词表大小</span>
+    <span class="token comment"># tgt_vocab = 目标语言词表大小</span>
+    
+    c <span class="token operator">=</span> copy<span class="token punctuation">.</span>deepcopy <span class="token comment"># 对象的深度copy/clone</span>
+    attn <span class="token operator">=</span> MultiHeadedAttention<span class="token punctuation">(</span>h<span class="token punctuation">,</span> d_model<span class="token punctuation">)</span> <span class="token comment"># 8, 512</span>
+    <span class="token comment"># 构造一个MultiHeadAttention对象</span>
+    
+    ff <span class="token operator">=</span> PositionwiseFeedForward<span class="token punctuation">(</span>d_model<span class="token punctuation">,</span> d_ff<span class="token punctuation">,</span> dropout<span class="token punctuation">)</span>
+    <span class="token comment"># 512, 2048, 0.1</span>
+    <span class="token comment"># 构造一个feed forward对象</span>
+
+    position <span class="token operator">=</span> PositionalEncoding<span class="token punctuation">(</span>d_model<span class="token punctuation">,</span> dropout<span class="token punctuation">)</span>
+    <span class="token comment"># 位置编码</span>
+
+    model <span class="token operator">=</span> EncoderDecoder<span class="token punctuation">(</span>
+        Encoder<span class="token punctuation">(</span>EncoderLayer<span class="token punctuation">(</span>d_model<span class="token punctuation">,</span> c<span class="token punctuation">(</span>attn<span class="token punctuation">)</span><span class="token punctuation">,</span> c<span class="token punctuation">(</span>ff<span class="token punctuation">)</span><span class="token punctuation">,</span> dropout<span class="token punctuation">)</span><span class="token punctuation">,</span> N<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        Decoder<span class="token punctuation">(</span>DecoderLayer<span class="token punctuation">(</span>d_model<span class="token punctuation">,</span> c<span class="token punctuation">(</span>attn<span class="token punctuation">)</span><span class="token punctuation">,</span> c<span class="token punctuation">(</span>attn<span class="token punctuation">)</span><span class="token punctuation">,</span> 
+                             c<span class="token punctuation">(</span>ff<span class="token punctuation">)</span><span class="token punctuation">,</span> dropout<span class="token punctuation">)</span><span class="token punctuation">,</span> N<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        nn<span class="token punctuation">.</span>Sequential<span class="token punctuation">(</span>Embeddings<span class="token punctuation">(</span>d_model<span class="token punctuation">,</span> src_vocab<span class="token punctuation">)</span><span class="token punctuation">,</span> c<span class="token punctuation">(</span>position<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        nn<span class="token punctuation">.</span>Sequential<span class="token punctuation">(</span>Embeddings<span class="token punctuation">(</span>d_model<span class="token punctuation">,</span> tgt_vocab<span class="token punctuation">)</span><span class="token punctuation">,</span> c<span class="token punctuation">(</span>position<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        Generator<span class="token punctuation">(</span>d_model<span class="token punctuation">,</span> tgt_vocab<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># This was important from their code. </span>
+    <span class="token comment"># Initialize parameters with Glorot / fan_avg.</span>
+    <span class="token keyword">for</span> p <span class="token keyword">in</span> model<span class="token punctuation">.</span>parameters<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> p<span class="token punctuation">.</span>dim<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">:</span>
+            nn<span class="token punctuation">.</span>init<span class="token punctuation">.</span>xavier_uniform<span class="token punctuation">(</span>p<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> model <span class="token comment"># EncoderDecoder 对象</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">feiran_li</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://ferry-li.github.io/2021/10/03/attention-is-all-you-need/">https://ferry-li.github.io/2021/10/03/attention-is-all-you-need/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">feiran_li</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/transformer/">
+                                    <span class="chip bg-color">transformer</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2021/11/17/hello-world/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        
+                        <span class="card-title">Hello World</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-17
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Ferry Li
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/06/03/on-the-detection-of-digital-face-manipulation-2020-cvpr/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="On the Detection of Digital Face Manipulation">
+                        
+                        <span class="card-title">On the Detection of Digital Face Manipulation</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            2020CVPR, On the Detection of Digital Face Manipulation
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-03
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/CV/" class="post-category">
+                                    CV
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/fakeface/">
+                        <span class="chip bg-color">fakeface</span>
+                    </a>
+                    
+                    <a href="/tags/transformer/">
+                        <span class="chip bg-color">transformer</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2021</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">Ferry Li</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">8.1k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Ferry-Li" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:feiran_li@cumt.edu.cn" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2115670136" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2115670136" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
